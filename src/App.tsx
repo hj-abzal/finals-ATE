@@ -14,19 +14,10 @@ function App() {
     const userData = useSelector<AppRootStateType, any>(state => state.registration)
 
     const register = () => {
-        axios.post('https://cards-nya-back-production.up.railway.app/2.0/auth/registration')
+        axios.post('https://cards-nya-back-production.up.railway.app/2.0/auth/registration', {email: })
             .then((res) => {
                 dispatch(registerAC())
             })
-    }
-    const setEmail = (e: ChangeEvent<HTMLInputElement>) => {
-        dispatch()
-    }
-    const setPassword = (e: ChangeEvent<HTMLInputElement>) => {
-
-    }
-    const setConfPassword = (e: ChangeEvent<HTMLInputElement>) => {
-
     }
 
     return (
@@ -34,9 +25,6 @@ function App() {
             <Routes>
                 <Route path='/auth' element={<Auth
                     register={register}
-                    setEmail={setEmail}
-                    setPassword={setPassword}
-                    setConfPassword={setConfPassword}
                 />}/>
                 <Route path='/login' element={<Login/>}/>
             </Routes>
