@@ -11,11 +11,7 @@ export const Login = () => {
 
     const onChangeHandlerPassword = (e: ChangeEvent<HTMLInputElement>) => {
         const inputValue = e.currentTarget.value
-        setEmail(inputValue)
-    }
-
-    const onChangeSignUp = () => {
-
+        setPassword(inputValue)
     }
 
     return (
@@ -23,15 +19,14 @@ export const Login = () => {
             <h1 className="itIncubator">It-incubator</h1>
             <h2 className="signUp">Sign In</h2>
 
-
             <div><input type="email" value={email} onChange={onChangeHandlerEmail}/>Email</div>
-
             <div><input type="password" value={password} onChange={onChangeHandlerPassword}/>Password</div>
 
 
 
-            <div><button>Forgot Password</button></div>
+            <a href="00">Forgot Password</a>
             <div><button>Login</button></div>
+
             <h3>Do you have an account?</h3>
             <a href="http://127.0.0.1:5173/auth">Sign up</a>
         </div>
