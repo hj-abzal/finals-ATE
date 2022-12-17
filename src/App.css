@@ -5,4 +5,7 @@
   top: 84px;
   background: #F9F9FE;
   border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
