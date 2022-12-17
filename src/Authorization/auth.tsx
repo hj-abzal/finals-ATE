@@ -6,20 +6,27 @@ export const Auth = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
+    console.log(email);
 
     function onChangeHandlerEmail(e: ChangeEvent<HTMLInputElement>) {
         const inputValue = e.currentTarget.value
         setEmail(inputValue)
     }
-
     function onChangeHandlerPassword(e: ChangeEvent<HTMLInputElement>) {
         const inputValue = e.currentTarget.value
         setPassword(inputValue)
     }
-
     function onChangeHandlerConfPassword(e: ChangeEvent<HTMLInputElement>) {
         const inputValue = e.currentTarget.value
         setConfirmPassword(inputValue)
+    }
+
+    function register() {
+
+    }
+
+    function cancel() {
+
     }
 
     return (
@@ -44,8 +51,8 @@ export const Auth = () => {
                 </div>
             </div>
             <div className={s.buttons}>
-                <button>Cancel</button>
-                <button>Register</button>
+                <button onClick={cancel}>Cancel</button>
+                <button onClick={register}>Register</button>
             </div>
         </div>
     );
