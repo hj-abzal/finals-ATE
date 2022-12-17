@@ -2,12 +2,16 @@
 const initialState = {
     email: '',
     password: '',
-    confirmPassword: ''
 }
+
 export const registrationReducer = (state: any = initialState, action: any) => {
   switch (action.type) {
       case 'REGISTER': {
-          return
+          return {
+              ...state,
+              email: action.email,
+              password: action.password
+          }
       }
       case 'CANCEL': {
 

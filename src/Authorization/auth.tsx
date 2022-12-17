@@ -1,32 +1,31 @@
 import React, {ChangeEvent, useState} from 'react';
 import s from './auth.module.css'
+import axios from 'axios'
 
+export type AuthPropsType = {
+    register: () => void
+    setEmail: (value: any) => void
+    setPassword: (value: any) => void
+    setConfPassword: (value: any) => void
+}
 
-export const Auth = () => {
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    const [confirmPassword, setConfirmPassword] = useState('')
-    console.log(email);
+export const Auth = (props: AuthPropsType) => {
 
-    function onChangeHandlerEmail(e: ChangeEvent<HTMLInputElement>) {
+    const onChangeHandlerEmail = (e: ChangeEvent<HTMLInputElement>) => {
         const inputValue = e.currentTarget.value
         setEmail(inputValue)
     }
-    function onChangeHandlerPassword(e: ChangeEvent<HTMLInputElement>) {
+    const onChangeHandlerPassword = (e: ChangeEvent<HTMLInputElement>) => {
         const inputValue = e.currentTarget.value
         setPassword(inputValue)
     }
-    function onChangeHandlerConfPassword(e: ChangeEvent<HTMLInputElement>) {
+    const onChangeHandlerConfPassword = (e: ChangeEvent<HTMLInputElement>) => {
         const inputValue = e.currentTarget.value
-        setConfirmPassword(inputValue)
+        setConfPassword(inputValue)
     }
 
-    function register() {
-
-    }
-
-    function cancel() {
-
+    const register = () => {
+        props.register()
     }
 
     return (
