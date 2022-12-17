@@ -1,10 +1,8 @@
 .App {
-  position: absolute;
   width: 413px;
   height: 540px;
   left: 434px;
   top: 84px;
-
   background: #F9F9FE;
   border-radius: 8px;
 }
